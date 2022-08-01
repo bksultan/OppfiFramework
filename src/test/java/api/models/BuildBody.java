@@ -10,12 +10,12 @@ public class BuildBody {
     IncomeInfo incomeInfo = new IncomeInfo();
     EmploymentInfo employmentInfo = new EmploymentInfo();
 
-    public Offer offerBody() {
+    public Offer offerBody(String ssn) {
         offer.setProduction(false);
         offer.setLanguage("en");
         offer.setCurrency("USD");
         offer.setCampaignId("11-50-newhope");
-        offer.setSocialSecurityNumber("123456780");
+        offer.setSocialSecurityNumber(ssn);
         offer.setLeadOfferId("20160912-21EC2020-3AEA-4069-A2DD-08002B30309D");
         offer.setEmail("test_customer@gmail.com");
         offer.setStateCode("FL");
@@ -29,8 +29,27 @@ public class BuildBody {
         return offer;
     }
 
+    public Offer offerBody(String ssn, int income, String state) {
+        offer.setProduction(false);
+        offer.setLanguage("en");
+        offer.setCurrency("USD");
+        offer.setCampaignId("11-50-newhope");
+        offer.setSocialSecurityNumber(ssn);
+        offer.setLeadOfferId("20160912-21EC2020-3AEA-4069-A2DD-08002B30309D");
+        offer.setEmail("test_customer@gmail.com");
+        offer.setStateCode(state);
+        offer.setGrossMonthlyIncome(income);
+        offer.setPersonalInfo(personalInfoBody());
+        offer.setBankInfo(bankInfoBody());
+        offer.setIncomeInfo(incomeInfoBody());
+        offer.setEmploymentInfo(employmentInfoBody());
+        offer.setRequestedLoanAmount(1500);
+
+        return offer;
+    }
+
     public PersonalInfo personalInfoBody() {
-        personalInfo.setFirstName("Jennifer");
+        personalInfo.setFirstName("Jane");
         personalInfo.setLastName("Smith");
         personalInfo.setDateOfBirth("19451009");
         personalInfo.setAddress(addressBody());
