@@ -10,4 +10,4 @@ However if you prefer you can use maven from the command line. In that case you 
 * `mvn test`: it will compile the code of your application and your tests. It will then run your tests (if you wrote any) and let you know if some fails
 
 
-### Author Nazar Hommenov
+### Author: Nazar Hommenov
