@@ -11,6 +11,7 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ResponseBody {
     private String status;
+    private String code;
     private PersonalInfo personalInfo;
     private Request request;
 }

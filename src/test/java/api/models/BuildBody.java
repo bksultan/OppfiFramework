@@ -30,8 +30,8 @@ public class BuildBody {
     }
 
     public PersonalInfo personalInfoBody() {
-        personalInfo.setFirstName("Beksultan");
-        personalInfo.setLastName("Ismatov");
+        personalInfo.setFirstName("Jennifer");
+        personalInfo.setLastName("Smith");
         personalInfo.setDateOfBirth("19451009");
         personalInfo.setAddress(addressBody());
         personalInfo.setMobilePhone("3224340098");

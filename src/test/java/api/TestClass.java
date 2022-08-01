@@ -8,14 +8,18 @@ public class TestClass {
     RequestBuilder requestBuilder = new RequestBuilder();
 
     @Test
-    public void artistTest() {
-        Response response = requestBuilder.post();
+    public void approvedTest() {
+        Response response = RequestBuilder.post();
         response.prettyPrint();
 
         String status = response.as(ResponseBody.class).getStatus();
+        String code = response.as(ResponseBody.class).getCode();
         String firstName = response.as(ResponseBody.class).getRequest().getPersonalInfo().getFirstName();
 
         System.out.println(status);
+        System.out.println(code);
         System.out.println(firstName);
     }
+
+
 }
